@@ -1,0 +1,35 @@
+name: Download Website with HTTrack
+
+on:
+  workflow_dispatch:
+    inputs:
+      website_url:
+        description: 'URL of the website to download'
+        required: true
+        default: 'https://code-theme.com/html/findhouses/index-3.html'
+
+jobs:
+  download_and_zip:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install HTTrack
+      run: sudo apt-get update && sudo apt-get install -y httrack zip
+
+    - name: Download website
+      run: |
+        mkdir website
+        httrack "${{ github.event.inputs.website_url }}" -O ./website
+
+    - name: Zip the website
+      run: |
+        zip -r website.zip website
+
+    - name: Upload ZIP artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: website-zip
+        path: website.zip
