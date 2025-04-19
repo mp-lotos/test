@@ -18,7 +18,7 @@ jobs:
       - name: 🌐 Download Website Using Httrack
         run: |
           mkdir -p my_download
-          httrack "https://code-theme.com/html/findhouses/index-3.html" -O ./my_download -%v
+          httrack "https://themesflat.co/html/proty/index.html" -O ./my_download -%v
 
       - name: 🗜️ Zip the Downloaded Website
         run: |
