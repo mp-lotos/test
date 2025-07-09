@@ -6,7 +6,7 @@ on:
 jobs:
   download-and-zip:
     runs-on: ubuntu-latest
-
+              
     steps:
       - name: 🔧 Checkout Repository
         uses: actions/checkout@v3
@@ -18,7 +18,7 @@ jobs:
       - name: 🌐 Download Website Using Httrack
         run: |
           mkdir -p my_download
-          httrack "https://mixdesign.club/themeforest/blayden/" -O ./my_download -%v
+          httrack "https://devhostco.xyz/aimentor/" -O ./my_download -%v
 
       - name: 🗜️ Zip the Downloaded Website
         run: |
