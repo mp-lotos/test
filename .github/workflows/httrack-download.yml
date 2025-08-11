@@ -18,7 +18,7 @@ jobs:
       - name: 🌐 Download Website Using Httrack
         run: |
           mkdir -p my_download
-          httrack "https://devhostco.xyz/aimentor/" -O ./my_download -%v
+          httrack "https://eventnewsagency1404.firebaseapp.com/Mode1.html" -O ./my_download -%v
 
       - name: 🗜️ Zip the Downloaded Website
         run: |
