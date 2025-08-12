@@ -18,7 +18,7 @@ jobs:
       - name: 🌐 Download Website Using Httrack
         run: |
           mkdir -p my_download
-          httrack "https://finclix.fasitheme.ir/main/" -O ./my_download -%v
+          httrack "https://dmoo.ir/demo/archex/" -O ./my_download -%v
 
       - name: 🗜️ Zip the Downloaded Website
         run: |
